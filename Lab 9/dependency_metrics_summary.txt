@@ -1,0 +1,20 @@
+DEPENDENCY METRICS SUMMARY
+==========================
+
+Total modules: 42
+Total dependencies: 160
+Cyclic dependencies: 116
+Isolated modules: 0
+Modules with no imports (fan-out=0): 12
+Modules not imported (fan-in=0): 1
+
+Module Categorization:
+- Stable Abstractions: 7
+- Unstable Abstractions: 3
+- Stable Concretions: 24
+- Unstable Concretions: 8
+
+Averages:
+- Average Fan-In: 3.81
+- Average Fan-Out: 3.81
+- Average Coupling Score: 13.52

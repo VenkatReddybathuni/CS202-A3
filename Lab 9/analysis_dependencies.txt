@@ -1,0 +1,204 @@
+=== Dependency Analysis ===
+
+Top 10 Most Coupled Modules:
++----------------------------------------------+----------+-----------+------------------+
+| Module                                       |   Fan-In |   Fan-Out |   Coupling Score |
++==============================================+==========+===========+==================+
+| uvicorn.config                               |       14 |        11 |              154 |
++----------------------------------------------+----------+-----------+------------------+
+| uvicorn                                      |       28 |         3 |               84 |
++----------------------------------------------+----------+-----------+------------------+
+| uvicorn.server                               |        7 |        10 |               70 |
++----------------------------------------------+----------+-----------+------------------+
+| uvicorn.supervisors                          |        5 |         6 |               30 |
++----------------------------------------------+----------+-----------+------------------+
+| uvicorn.protocols.http.h11_impl              |        3 |         9 |               27 |
++----------------------------------------------+----------+-----------+------------------+
+| uvicorn.protocols.http.httptools_impl        |        3 |         9 |               27 |
++----------------------------------------------+----------+-----------+------------------+
+| uvicorn.protocols.websockets.websockets_impl |        3 |         7 |               21 |
++----------------------------------------------+----------+-----------+------------------+
+| uvicorn.protocols.websockets.wsproto_impl    |        3 |         7 |               21 |
++----------------------------------------------+----------+-----------+------------------+
+| uvicorn.supervisors.basereload               |        4 |         4 |               16 |
++----------------------------------------------+----------+-----------+------------------+
+| uvicorn._types                               |       14 |         1 |               14 |
++----------------------------------------------+----------+-----------+------------------+
+
+
+Cyclic Dependencies Analysis:
+Found 116 cyclic dependencies:
+Cycle 1: uvicorn -> uvicorn
+Cycle 2: uvicorn.supervisors -> uvicorn.supervisors
+Cycle 3: uvicorn.protocols.websockets.wsproto_impl -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.wsproto_impl
+Cycle 4: uvicorn.protocols.websockets.wsproto_impl -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.wsproto_impl
+Cycle 5: uvicorn.protocols.websockets.wsproto_impl -> uvicorn.config -> uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.wsproto_impl
+Cycle 6: uvicorn.protocols.websockets.wsproto_impl -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.wsproto_impl
+Cycle 7: uvicorn.protocols.websockets.wsproto_impl -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.wsproto_impl
+Cycle 8: uvicorn.protocols.websockets.wsproto_impl -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.wsproto_impl
+Cycle 9: uvicorn.protocols.websockets.wsproto_impl -> uvicorn.protocols.utils -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.wsproto_impl
+Cycle 10: uvicorn.protocols.websockets.wsproto_impl -> uvicorn.server -> uvicorn.protocols.websockets.wsproto_impl
+Cycle 11: uvicorn.protocols.http.h11_impl -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.h11_impl
+Cycle 12: uvicorn.protocols.http.h11_impl -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.h11_impl
+Cycle 13: uvicorn.protocols.http.h11_impl -> uvicorn.config -> uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.h11_impl
+Cycle 14: uvicorn.protocols.http.h11_impl -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.h11_impl
+Cycle 15: uvicorn.protocols.http.h11_impl -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.h11_impl
+Cycle 16: uvicorn.protocols.http.h11_impl -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.h11_impl
+Cycle 17: uvicorn.protocols.http.h11_impl -> uvicorn.protocols.http.flow_control -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.h11_impl
+Cycle 18: uvicorn.protocols.http.h11_impl -> uvicorn.protocols.utils -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.h11_impl
+Cycle 19: uvicorn.protocols.http.h11_impl -> uvicorn.server -> uvicorn.protocols.http.h11_impl
+Cycle 20: uvicorn.supervisors.watchfilesreload -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 21: uvicorn.supervisors.watchfilesreload -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 22: uvicorn.supervisors.watchfilesreload -> uvicorn.config -> uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 23: uvicorn.supervisors.watchfilesreload -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 24: uvicorn.supervisors.watchfilesreload -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 25: uvicorn.supervisors.watchfilesreload -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 26: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 27: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 28: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 29: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 30: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 31: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 32: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 33: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 34: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 35: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 36: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 37: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 38: uvicorn.supervisors.watchfilesreload -> uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.watchfilesreload
+Cycle 39: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 40: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 41: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 42: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.httptools_impl -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 43: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.websockets_impl -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 44: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 45: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 46: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 47: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 48: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 49: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 50: uvicorn.middleware.asgi2 -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.asgi2
+Cycle 51: uvicorn.supervisors.basereload -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload
+Cycle 52: uvicorn.supervisors.basereload -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload
+Cycle 53: uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload
+Cycle 54: uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload
+Cycle 55: uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload
+Cycle 56: uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload
+Cycle 57: uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload
+Cycle 58: uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload
+Cycle 59: uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload
+Cycle 60: uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload
+Cycle 61: uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload
+Cycle 62: uvicorn.supervisors.basereload -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload
+Cycle 63: uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload
+Cycle 64: uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload
+Cycle 65: uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload
+Cycle 66: uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload
+Cycle 67: uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload
+Cycle 68: uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload
+Cycle 69: uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.basereload
+Cycle 70: uvicorn.supervisors.basereload -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload -> uvicorn.supervisors.basereload
+Cycle 71: uvicorn.supervisors.statreload -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload
+Cycle 72: uvicorn.supervisors.statreload -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload
+Cycle 73: uvicorn.supervisors.statreload -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload
+Cycle 74: uvicorn.supervisors.statreload -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload
+Cycle 75: uvicorn.supervisors.statreload -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.statreload
+Cycle 76: uvicorn.supervisors.statreload -> uvicorn.supervisors -> uvicorn.supervisors.statreload
+Cycle 77: uvicorn.protocols.http.flow_control -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.httptools_impl -> uvicorn.protocols.http.flow_control
+Cycle 78: uvicorn.protocols.websockets.websockets_impl -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.websockets_impl
+Cycle 79: uvicorn.protocols.websockets.websockets_impl -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.websockets_impl
+Cycle 80: uvicorn.protocols.websockets.websockets_impl -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.websockets_impl
+Cycle 81: uvicorn.protocols.websockets.websockets_impl -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.websockets_impl
+Cycle 82: uvicorn.protocols.websockets.websockets_impl -> uvicorn.config -> uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.websockets_impl
+Cycle 83: uvicorn.protocols.websockets.websockets_impl -> uvicorn.protocols.utils -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.websockets.websockets_impl
+Cycle 84: uvicorn.protocols.websockets.websockets_impl -> uvicorn.server -> uvicorn.protocols.websockets.websockets_impl
+Cycle 85: uvicorn.middleware.wsgi -> uvicorn -> uvicorn.config -> uvicorn.middleware.wsgi
+Cycle 86: uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.config -> uvicorn.middleware.wsgi
+Cycle 87: uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.config -> uvicorn.middleware.wsgi
+Cycle 88: uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.httptools_impl -> uvicorn.config -> uvicorn.middleware.wsgi
+Cycle 89: uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.wsgi
+Cycle 90: uvicorn.middleware.wsgi -> uvicorn -> uvicorn.main -> uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn.config -> uvicorn.middleware.wsgi
+Cycle 91: uvicorn.supervisors -> uvicorn -> uvicorn.main -> uvicorn.supervisors
+Cycle 92: uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn -> uvicorn.main -> uvicorn.supervisors
+Cycle 93: uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn._subprocess -> uvicorn -> uvicorn.main -> uvicorn.supervisors
+Cycle 94: uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn._subprocess -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.supervisors
+Cycle 95: uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.supervisors
+Cycle 96: uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn._subprocess -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.supervisors
+Cycle 97: uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn.config -> uvicorn -> uvicorn.main -> uvicorn.supervisors
+Cycle 98: uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main -> uvicorn.supervisors
+Cycle 99: uvicorn.supervisors -> uvicorn.supervisors.multiprocess -> uvicorn.config -> uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.supervisors
+Cycle 100: uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.config -> uvicorn.middleware.proxy_headers
+Cycle 101: uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.config -> uvicorn.middleware.proxy_headers
+Cycle 102: uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.config -> uvicorn.middleware.proxy_headers
+Cycle 103: uvicorn.middleware.proxy_headers -> uvicorn -> uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.httptools_impl -> uvicorn.config -> uvicorn.middleware.proxy_headers
+Cycle 104: uvicorn.main -> uvicorn -> uvicorn.main
+Cycle 105: uvicorn.main -> uvicorn.config -> uvicorn -> uvicorn.main
+Cycle 106: uvicorn.main -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main
+Cycle 107: uvicorn.main -> uvicorn.server -> uvicorn -> uvicorn.main
+Cycle 108: uvicorn.main -> uvicorn.server -> uvicorn.config -> uvicorn -> uvicorn.main
+Cycle 109: uvicorn.main -> uvicorn.server -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main
+Cycle 110: uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.httptools_impl -> uvicorn -> uvicorn.main
+Cycle 111: uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.httptools_impl -> uvicorn.config -> uvicorn -> uvicorn.main
+Cycle 112: uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.httptools_impl -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn -> uvicorn.main
+Cycle 113: uvicorn.main -> uvicorn.server -> uvicorn.protocols.http.httptools_impl -> uvicorn.protocols.utils -> uvicorn -> uvicorn.main
+Cycle 114: uvicorn.protocols.http.httptools_impl -> uvicorn.server -> uvicorn.protocols.http.httptools_impl
+Cycle 115: uvicorn -> uvicorn.config -> uvicorn
+Cycle 116: uvicorn -> uvicorn.config -> uvicorn.middleware.message_logger -> uvicorn
+
+
+Unused and Disconnected Modules:
+No isolated modules found.
+
+Modules not imported by any other module (no fan-in): 1
+  - __main__
+
+Modules not importing any other module (no fan-out): 12
+  - click
+  - typing_extensions
+  - uvicorn.importer
+  - uvicorn.lifespan
+  - uvicorn.loops
+  - uvicorn.loops.asyncio
+  - uvicorn.loops.uvloop
+  - uvicorn.middleware
+  - uvicorn.protocols
+  - uvicorn.protocols.http
+  - uvicorn.protocols.websockets
+  - yaml
+
+
+Dependency Depth Analysis:
+Maximum dependency depth: 2
+Longest dependency chain: __main__ -> uvicorn.config -> click
+
+
+Module Categorization:
+Stable Abstractions (high fan-in, low fan-out): 7
+  - uvicorn
+  - uvicorn._types
+  - uvicorn.protocols.utils
+  - uvicorn.logging
+  - click
+  - ... and 2 more
+
+Unstable Abstractions (high fan-in, high fan-out): 3
+  - uvicorn.config
+  - uvicorn.server
+  - uvicorn.supervisors
+
+Stable Concretions (low fan-in, low fan-out): 24
+  - uvicorn.supervisors.basereload
+  - uvicorn.supervisors.multiprocess
+  - uvicorn.supervisors.statreload
+  - uvicorn.supervisors.watchfilesreload
+  - uvicorn._subprocess
+  - ... and 19 more
+
+Unstable Concretions (low fan-in, high fan-out): 8
+  - uvicorn.protocols.http.h11_impl
+  - uvicorn.protocols.http.httptools_impl
+  - uvicorn.protocols.websockets.websockets_impl
+  - uvicorn.protocols.websockets.wsproto_impl
+  - uvicorn.main
+  - ... and 3 more
+

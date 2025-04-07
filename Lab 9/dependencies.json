@@ -1,0 +1,674 @@
+{
+    "__main__": {
+        "bacon": 0,
+        "imports": [
+            "uvicorn",
+            "uvicorn.__main__",
+            "uvicorn._subprocess",
+            "uvicorn._types",
+            "uvicorn.config",
+            "uvicorn.importer",
+            "uvicorn.lifespan",
+            "uvicorn.lifespan.off",
+            "uvicorn.lifespan.on",
+            "uvicorn.logging",
+            "uvicorn.loops",
+            "uvicorn.loops.asyncio",
+            "uvicorn.loops.auto",
+            "uvicorn.loops.uvloop",
+            "uvicorn.main",
+            "uvicorn.middleware",
+            "uvicorn.middleware.asgi2",
+            "uvicorn.middleware.message_logger",
+            "uvicorn.middleware.proxy_headers",
+            "uvicorn.middleware.wsgi",
+            "uvicorn.protocols",
+            "uvicorn.protocols.http",
+            "uvicorn.protocols.http.auto",
+            "uvicorn.protocols.http.flow_control",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl",
+            "uvicorn.protocols.utils",
+            "uvicorn.protocols.websockets",
+            "uvicorn.protocols.websockets.auto",
+            "uvicorn.protocols.websockets.websockets_impl",
+            "uvicorn.protocols.websockets.wsproto_impl",
+            "uvicorn.server",
+            "uvicorn.supervisors",
+            "uvicorn.supervisors.basereload",
+            "uvicorn.supervisors.multiprocess",
+            "uvicorn.supervisors.statreload",
+            "uvicorn.supervisors.watchfilesreload",
+            "uvicorn.workers"
+        ],
+        "name": "__main__",
+        "path": null
+    },
+    "click": {
+        "bacon": 2,
+        "imported_by": [
+            "uvicorn.config",
+            "uvicorn.logging",
+            "uvicorn.main",
+            "uvicorn.server",
+            "uvicorn.supervisors.basereload",
+            "uvicorn.supervisors.multiprocess"
+        ],
+        "name": "click",
+        "path": "/home/venkat/anaconda3/envs/stt/lib/python3.10/site-packages/click/__init__.py"
+    },
+    "typing_extensions": {
+        "bacon": 2,
+        "imported_by": [
+            "uvicorn._types"
+        ],
+        "name": "typing_extensions",
+        "path": "/home/venkat/anaconda3/envs/stt/lib/python3.10/site-packages/typing_extensions.py"
+    },
+    "uvicorn": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn",
+            "uvicorn.__main__",
+            "uvicorn._subprocess",
+            "uvicorn.config",
+            "uvicorn.lifespan.off",
+            "uvicorn.lifespan.on",
+            "uvicorn.loops.auto",
+            "uvicorn.main",
+            "uvicorn.middleware.asgi2",
+            "uvicorn.middleware.message_logger",
+            "uvicorn.middleware.proxy_headers",
+            "uvicorn.middleware.wsgi",
+            "uvicorn.protocols.http.auto",
+            "uvicorn.protocols.http.flow_control",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl",
+            "uvicorn.protocols.utils",
+            "uvicorn.protocols.websockets.auto",
+            "uvicorn.protocols.websockets.websockets_impl",
+            "uvicorn.protocols.websockets.wsproto_impl",
+            "uvicorn.server",
+            "uvicorn.supervisors",
+            "uvicorn.supervisors.basereload",
+            "uvicorn.supervisors.multiprocess",
+            "uvicorn.supervisors.statreload",
+            "uvicorn.supervisors.watchfilesreload",
+            "uvicorn.workers"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn.config",
+            "uvicorn.main"
+        ],
+        "name": "uvicorn",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/__init__.py"
+    },
+    "uvicorn.__main__": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "uvicorn"
+        ],
+        "name": "uvicorn.__main__",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/__main__.py"
+    },
+    "uvicorn._subprocess": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.supervisors.basereload",
+            "uvicorn.supervisors.multiprocess"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn.config"
+        ],
+        "name": "uvicorn._subprocess",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/_subprocess.py"
+    },
+    "uvicorn._types": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.config",
+            "uvicorn.lifespan.on",
+            "uvicorn.main",
+            "uvicorn.middleware.asgi2",
+            "uvicorn.middleware.message_logger",
+            "uvicorn.middleware.proxy_headers",
+            "uvicorn.middleware.wsgi",
+            "uvicorn.protocols.http.flow_control",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl",
+            "uvicorn.protocols.utils",
+            "uvicorn.protocols.websockets.websockets_impl",
+            "uvicorn.protocols.websockets.wsproto_impl"
+        ],
+        "imports": [
+            "typing_extensions"
+        ],
+        "name": "uvicorn._types",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/_types.py"
+    },
+    "uvicorn.config": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn",
+            "uvicorn._subprocess",
+            "uvicorn.main",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl",
+            "uvicorn.protocols.websockets.websockets_impl",
+            "uvicorn.protocols.websockets.wsproto_impl",
+            "uvicorn.server",
+            "uvicorn.supervisors.basereload",
+            "uvicorn.supervisors.multiprocess",
+            "uvicorn.supervisors.statreload",
+            "uvicorn.supervisors.watchfilesreload",
+            "uvicorn.workers"
+        ],
+        "imports": [
+            "click",
+            "uvicorn",
+            "uvicorn._types",
+            "uvicorn.importer",
+            "uvicorn.logging",
+            "uvicorn.middleware",
+            "uvicorn.middleware.asgi2",
+            "uvicorn.middleware.message_logger",
+            "uvicorn.middleware.proxy_headers",
+            "uvicorn.middleware.wsgi",
+            "yaml"
+        ],
+        "name": "uvicorn.config",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/config.py"
+    },
+    "uvicorn.importer": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.config"
+        ],
+        "name": "uvicorn.importer",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/importer.py"
+    },
+    "uvicorn.lifespan": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "name": "uvicorn.lifespan",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/lifespan/__init__.py"
+    },
+    "uvicorn.lifespan.off": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "uvicorn"
+        ],
+        "name": "uvicorn.lifespan.off",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/lifespan/off.py"
+    },
+    "uvicorn.lifespan.on": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types"
+        ],
+        "name": "uvicorn.lifespan.on",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/lifespan/on.py"
+    },
+    "uvicorn.logging": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.config",
+            "uvicorn.middleware.message_logger",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl",
+            "uvicorn.protocols.websockets.websockets_impl",
+            "uvicorn.protocols.websockets.wsproto_impl"
+        ],
+        "imports": [
+            "click"
+        ],
+        "name": "uvicorn.logging",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/logging.py"
+    },
+    "uvicorn.loops": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.loops.auto"
+        ],
+        "name": "uvicorn.loops",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/loops/__init__.py"
+    },
+    "uvicorn.loops.asyncio": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.loops.auto"
+        ],
+        "name": "uvicorn.loops.asyncio",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/loops/asyncio.py"
+    },
+    "uvicorn.loops.auto": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn.loops",
+            "uvicorn.loops.asyncio",
+            "uvicorn.loops.uvloop"
+        ],
+        "name": "uvicorn.loops.auto",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/loops/auto.py"
+    },
+    "uvicorn.loops.uvloop": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.loops.auto"
+        ],
+        "name": "uvicorn.loops.uvloop",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/loops/uvloop.py"
+    },
+    "uvicorn.main": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn"
+        ],
+        "imports": [
+            "click",
+            "uvicorn",
+            "uvicorn._types",
+            "uvicorn.config",
+            "uvicorn.server",
+            "uvicorn.supervisors"
+        ],
+        "name": "uvicorn.main",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/main.py"
+    },
+    "uvicorn.middleware": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.config"
+        ],
+        "name": "uvicorn.middleware",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/middleware/__init__.py"
+    },
+    "uvicorn.middleware.asgi2": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.config"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types"
+        ],
+        "name": "uvicorn.middleware.asgi2",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/middleware/asgi2.py"
+    },
+    "uvicorn.middleware.message_logger": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.config"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types",
+            "uvicorn.logging"
+        ],
+        "name": "uvicorn.middleware.message_logger",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/middleware/message_logger.py"
+    },
+    "uvicorn.middleware.proxy_headers": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.config"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types"
+        ],
+        "name": "uvicorn.middleware.proxy_headers",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/middleware/proxy_headers.py"
+    },
+    "uvicorn.middleware.wsgi": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.config"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types"
+        ],
+        "name": "uvicorn.middleware.wsgi",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/middleware/wsgi.py"
+    },
+    "uvicorn.protocols": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.protocols.http.auto",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl",
+            "uvicorn.protocols.websockets.auto",
+            "uvicorn.protocols.websockets.websockets_impl",
+            "uvicorn.protocols.websockets.wsproto_impl",
+            "uvicorn.server"
+        ],
+        "name": "uvicorn.protocols",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/__init__.py"
+    },
+    "uvicorn.protocols.http": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.protocols.http.auto",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl",
+            "uvicorn.server"
+        ],
+        "name": "uvicorn.protocols.http",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/http/__init__.py"
+    },
+    "uvicorn.protocols.http.auto": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn.protocols",
+            "uvicorn.protocols.http",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl"
+        ],
+        "name": "uvicorn.protocols.http.auto",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/http/auto.py"
+    },
+    "uvicorn.protocols.http.flow_control": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types"
+        ],
+        "name": "uvicorn.protocols.http.flow_control",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/http/flow_control.py"
+    },
+    "uvicorn.protocols.http.h11_impl": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.protocols.http.auto",
+            "uvicorn.server"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types",
+            "uvicorn.config",
+            "uvicorn.logging",
+            "uvicorn.protocols",
+            "uvicorn.protocols.http",
+            "uvicorn.protocols.http.flow_control",
+            "uvicorn.protocols.utils",
+            "uvicorn.server"
+        ],
+        "name": "uvicorn.protocols.http.h11_impl",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/http/h11_impl.py"
+    },
+    "uvicorn.protocols.http.httptools_impl": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.protocols.http.auto",
+            "uvicorn.server"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types",
+            "uvicorn.config",
+            "uvicorn.logging",
+            "uvicorn.protocols",
+            "uvicorn.protocols.http",
+            "uvicorn.protocols.http.flow_control",
+            "uvicorn.protocols.utils",
+            "uvicorn.server"
+        ],
+        "name": "uvicorn.protocols.http.httptools_impl",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/http/httptools_impl.py"
+    },
+    "uvicorn.protocols.utils": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl",
+            "uvicorn.protocols.websockets.websockets_impl",
+            "uvicorn.protocols.websockets.wsproto_impl"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types"
+        ],
+        "name": "uvicorn.protocols.utils",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/utils.py"
+    },
+    "uvicorn.protocols.websockets": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.protocols.websockets.auto",
+            "uvicorn.server"
+        ],
+        "name": "uvicorn.protocols.websockets",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/websockets/__init__.py"
+    },
+    "uvicorn.protocols.websockets.auto": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn.protocols",
+            "uvicorn.protocols.websockets",
+            "uvicorn.protocols.websockets.websockets_impl",
+            "uvicorn.protocols.websockets.wsproto_impl"
+        ],
+        "name": "uvicorn.protocols.websockets.auto",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/websockets/auto.py"
+    },
+    "uvicorn.protocols.websockets.websockets_impl": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.protocols.websockets.auto",
+            "uvicorn.server"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types",
+            "uvicorn.config",
+            "uvicorn.logging",
+            "uvicorn.protocols",
+            "uvicorn.protocols.utils",
+            "uvicorn.server"
+        ],
+        "name": "uvicorn.protocols.websockets.websockets_impl",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/websockets/websockets_impl.py"
+    },
+    "uvicorn.protocols.websockets.wsproto_impl": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.protocols.websockets.auto",
+            "uvicorn.server"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn._types",
+            "uvicorn.config",
+            "uvicorn.logging",
+            "uvicorn.protocols",
+            "uvicorn.protocols.utils",
+            "uvicorn.server"
+        ],
+        "name": "uvicorn.protocols.websockets.wsproto_impl",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/protocols/websockets/wsproto_impl.py"
+    },
+    "uvicorn.server": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.main",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl",
+            "uvicorn.protocols.websockets.websockets_impl",
+            "uvicorn.protocols.websockets.wsproto_impl",
+            "uvicorn.workers"
+        ],
+        "imports": [
+            "click",
+            "uvicorn",
+            "uvicorn.config",
+            "uvicorn.protocols",
+            "uvicorn.protocols.http",
+            "uvicorn.protocols.http.h11_impl",
+            "uvicorn.protocols.http.httptools_impl",
+            "uvicorn.protocols.websockets",
+            "uvicorn.protocols.websockets.websockets_impl",
+            "uvicorn.protocols.websockets.wsproto_impl"
+        ],
+        "name": "uvicorn.server",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/server.py"
+    },
+    "uvicorn.supervisors": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.main",
+            "uvicorn.supervisors",
+            "uvicorn.supervisors.statreload",
+            "uvicorn.supervisors.watchfilesreload"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn.supervisors",
+            "uvicorn.supervisors.basereload",
+            "uvicorn.supervisors.multiprocess",
+            "uvicorn.supervisors.statreload",
+            "uvicorn.supervisors.watchfilesreload"
+        ],
+        "name": "uvicorn.supervisors",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/supervisors/__init__.py"
+    },
+    "uvicorn.supervisors.basereload": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.supervisors",
+            "uvicorn.supervisors.statreload",
+            "uvicorn.supervisors.watchfilesreload"
+        ],
+        "imports": [
+            "click",
+            "uvicorn",
+            "uvicorn._subprocess",
+            "uvicorn.config"
+        ],
+        "name": "uvicorn.supervisors.basereload",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/supervisors/basereload.py"
+    },
+    "uvicorn.supervisors.multiprocess": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.supervisors"
+        ],
+        "imports": [
+            "click",
+            "uvicorn",
+            "uvicorn._subprocess",
+            "uvicorn.config"
+        ],
+        "name": "uvicorn.supervisors.multiprocess",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/supervisors/multiprocess.py"
+    },
+    "uvicorn.supervisors.statreload": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.supervisors"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn.config",
+            "uvicorn.supervisors",
+            "uvicorn.supervisors.basereload"
+        ],
+        "name": "uvicorn.supervisors.statreload",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/supervisors/statreload.py"
+    },
+    "uvicorn.supervisors.watchfilesreload": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__",
+            "uvicorn.supervisors"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn.config",
+            "uvicorn.supervisors",
+            "uvicorn.supervisors.basereload"
+        ],
+        "name": "uvicorn.supervisors.watchfilesreload",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/supervisors/watchfilesreload.py"
+    },
+    "uvicorn.workers": {
+        "bacon": 1,
+        "imported_by": [
+            "__main__"
+        ],
+        "imports": [
+            "uvicorn",
+            "uvicorn.config",
+            "uvicorn.server"
+        ],
+        "name": "uvicorn.workers",
+        "path": "/home/venkat/Documents/STT/Lab9/uvicorn/uvicorn/workers.py"
+    },
+    "yaml": {
+        "bacon": 2,
+        "imported_by": [
+            "uvicorn.config"
+        ],
+        "name": "yaml",
+        "path": "/home/venkat/anaconda3/envs/stt/lib/python3.10/site-packages/yaml/__init__.py"
+    }
+}
